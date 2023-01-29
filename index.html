@@ -38,7 +38,7 @@
       }
       .mapouter {
         width: 80%;
-        height: 400px;
+        height: 650px;
         padding: 0.8rem;
         margin: 0 auto;
         display: flex;
@@ -48,8 +48,8 @@
       .gmap_canvas {
         overflow: hidden;
         background: none !important;
-        height: 400px;
-        width: 400px;
+        height: 650px;
+        width: 650px;
       }
       .map-header {
         padding: 1rem;
@@ -57,6 +57,14 @@
         text-align: center;
         color: white;
       }
+      .map-subheader {
+        padding: 1rem;
+        font-size: 0.9rem;
+        text-align: center;
+        color: white;
+      }
+      
+
 
       @media (min-width: 1000px) {
         img {
@@ -82,11 +90,14 @@
     <h2 class="map-header">
       Here is a map so you can easily locate our venue! 😊
     </h2>
+    <h3 class="map-subheader">
+        (click view larger map)
+    </h3>
     <div class="mapouter">
       <div class="gmap_canvas">
         <iframe
-          width="400"
-          height="400"
+          width="650"
+          height="650"
           id="gmap_canvas"
           src="https://maps.google.com/maps?q=Dada's%20Tambayan%20-%20Mabiga&t=&z=13&ie=UTF8&iwloc=&output=embed"
           frameborder="0"
