@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: black;
+        font-family: "Lato", sans-serif;
+      }
+      .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: auto;
+      }
+
+      video {
+        width: 100%;
+        height: auto;
+      }
+      .header {
+        padding-top: 50px;
+        font-size: 3rem;
+        text-align: center;
+        color: white;
+      }
+      .header-text {
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+      }
+      .mapouter {
+        width: 80%;
+        height: 400px;
+        padding: 0.8rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        height: 400px;
+        width: 400px;
+      }
+      .map-header {
+        padding: 1rem;
+        font-size: 1rem;
+        text-align: center;
+        color: white;
+      }
+
+      @media (min-width: 1000px) {
+        video {
+          width: 45%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="header">✉️</h1>
+    <h2 class="header-text">You are invited! 🎉</h2>
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="lian.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <h2 class="map-header">
+      Here is a map so you can easily locate our venue! 😊
+    </h2>
+    <div class="mapouter">
+      <div class="gmap_canvas">
+        <iframe
+          width="400"
+          height="400"
+          id="gmap_canvas"
+          src="https://maps.google.com/maps?q=Dada's%20Tambayan%20-%20Mabiga&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          frameborder="0"
+          scrolling="yes"
+          marginheight="0"
+          marginwidth="0"
+        ></iframe
+        ><br />
+      </div>
+    </div>
+    <h2 class="map-header">See you there! ❤️</h2>
+  </body>
+</html>
