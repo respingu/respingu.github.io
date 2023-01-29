@@ -12,26 +12,29 @@
         font-family: "Lato", sans-serif;
       }
       .video-container {
+        padding-top: 1rem;
         display: flex;
         justify-content: center;
         align-items: flex-start;
         height: auto;
       }
-
+      img {
+        width: 100%
+      }
       video {
         width: 100%;
         height: auto;
       }
       .header {
         padding-top: 50px;
-        font-size: 3rem;
+        font-size: 4.5rem;
         text-align: center;
         color: white;
       }
       .header-text {
         text-align: center;
         color: white;
-        font-size: 2rem;
+        font-size: 3.5rem;
       }
       .mapouter {
         width: 80%;
@@ -50,12 +53,15 @@
       }
       .map-header {
         padding: 1rem;
-        font-size: 1rem;
+        font-size: 2.5rem;
         text-align: center;
         color: white;
       }
 
       @media (min-width: 1000px) {
+        img {
+          width: 40%;
+        }
         video {
           width: 45%;
           height: auto;
@@ -67,10 +73,11 @@
     <h1 class="header">✉️</h1>
     <h2 class="header-text">You are invited! 🎉</h2>
     <div class="video-container">
-      <video autoplay muted loop>
+      <!-- <video autoplay muted loop>
         <source src="lian.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> -->
+      <img src="lian.jpg" alt="lian birthday girl">
     </div>
     <h2 class="map-header">
       Here is a map so you can easily locate our venue! 😊
