@@ -11,6 +11,11 @@
         background-color: black;
         font-family: "Lato", sans-serif;
       }
+      .wrapper {
+        height: 100%;
+        width: 100%;
+        background: black;
+      }
       .video-container {
         padding-top: 1rem;
         display: flex;
@@ -19,7 +24,7 @@
         height: auto;
       }
       img {
-        width: 100%
+        width: 100%;
       }
       video {
         width: 100%;
@@ -63,8 +68,6 @@
         text-align: center;
         color: white;
       }
-      
-
 
       @media (min-width: 1000px) {
         img {
@@ -75,39 +78,244 @@
           height: auto;
         }
       }
+      .sunflower {
+          position: absolute;
+          height: 14px;
+          width: 14px;
+          border-radius: 50%;
+          background: #5e412f;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          animation: flowerFall 4s infinite linear, rotate 3s infinite linear;
+          z-index: 1;
+        }
+        .sf-petal-one {
+          position: relative;
+          height: 45px;
+          width: 12px;
+          border-radius: 6px;
+          background: gold;
+          z-index: -1;
+          transform: rotate(60deg);
+        }
+        .sf-petal-two {
+          position: absolute;
+          height: 45px;
+          width: 12px;
+          border-radius: 6px;
+          background: gold;
+          z-index: -1;
+          transform: rotate(120deg);
+        }
+        .sf-petal-three {
+          position: absolute;
+          height: 45px;
+          width: 12px;
+          border-radius: 6px;
+          background: gold;
+          z-index: -1;
+        }
+        .whiteflower {
+          position: absolute;
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          background: #e3c77b;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          animation: flowerFall 5s infinite linear, rotate 1s infinite linear;
+          z-index: 1;
+        }
+        .wf-petal-one {
+          position: relative;
+          height: 35px;
+          width: 12px;
+          border-radius: 6px;
+          background: #ddd;
+          z-index: -1;
+        }
+        .wf-petal-two {
+          position: absolute;
+          height: 35px;
+          width: 12px;
+          border-radius: 6px;
+          background: #ddd;
+          z-index: -1;
+          transform: rotate(60deg);
+        }
+        .wf-petal-three {
+          position: absolute;
+          height: 35px;
+          width: 12px;
+          border-radius: 6px;
+          background: #ddd;
+          z-index: -1;
+          transform: rotate(120deg);
+        }
+        .flowers {
+          top: -100px;
+        }
+        @keyframes flapLeftWing {
+          0% {
+            transform: rotateY(0deg) skewX(15deg);
+          }
+          25% {
+            transform: rotateY(70deg) skewX(15deg);
+          }
+          75% {
+            transform: rotateY(-70deg) skewX(15deg);
+          }
+          100% {
+            transform: rotateY(0deg) skewX(15deg);
+          }
+        }
+        @keyframes flapBottomLeftWing {
+          0% {
+            transform: rotateY(0deg) skewX(-20deg);
+          }
+          25% {
+            transform: rotateY(70deg) skewX(-20deg);
+          }
+          75% {
+            transform: rotateY(-70deg) skewX(-20deg);
+          }
+          100% {
+            transform: rotateY(0deg) skewX(-20deg);
+          }
+        }
+        @keyframes flapRightWing {
+          0% {
+            transform: rotateY(0deg) skewX(-15deg);
+          }
+          25% {
+            transform: rotateY(70deg) skewX(-15deg);
+          }
+          75% {
+            transform: rotateY(-70deg) skewX(-15deg);
+          }
+          100% {
+            transform: rotateY(0deg) skewX(-15deg);
+          }
+        }
+        @keyframes flapBottomRightWing {
+          0% {
+            transform: rotateY(0deg) skewX(20deg);
+          }
+          25% {
+            transform: rotateY(70deg) skewX(20deg);
+          }
+          75% {
+            transform: rotateY(-70deg) skewX(20deg);
+          }
+          100% {
+            transform: rotateY(0deg) skewX(20deg);
+          }
+        }
+        @keyframes lift {
+          50% {
+            transform: scale(0.9);
+          }
+        }
+        @keyframes flowerFall {
+          100% {
+            top: 102%;
+          }
+        }
+        @keyframes rotate {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
     </style>
   </head>
   <body>
-    <h1 class="header">✉️</h1>
-    <h2 class="header-text">You are invited! 🎉</h2>
-    <div class="video-container">
-      <!-- <video autoplay muted loop>
+    <div id="wrapper" class="wrapper">
+      <h1 class="header">✉️</h1>
+      <h2 class="header-text">You are invited! 🎉</h2>
+      <div class="video-container">
+        <!-- <video autoplay muted loop>
         <source src="lian.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video> -->
-      <img src="lian.jpg" alt="lian birthday girl">
-    </div>
-    <h2 class="map-header">
-      Here is a map so you can easily locate our venue! 😊
-    </h2>
-    <h3 class="map-subheader">
-        (click view larger map)
-    </h3>
-    <div class="mapouter">
-      <div class="gmap_canvas">
-        <iframe
-          width="650"
-          height="650"
-          id="gmap_canvas"
-          src="https://maps.google.com/maps?q=Dada's%20Tambayan%20-%20Mabiga&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          frameborder="0"
-          scrolling="yes"
-          marginheight="0"
-          marginwidth="0"
-        ></iframe
-        ><br />
+        <img src="lian.jpg" alt="lian birthday girl" />
       </div>
+      <h2 class="map-header">
+        Here is a map so you can easily locate our venue! 😊
+      </h2>
+      <h3 class="map-subheader">(click view larger map)</h3>
+      <div class="mapouter">
+        <div class="gmap_canvas">
+          <iframe
+            width="650"
+            height="650"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=Dada's%20Tambayan%20-%20Mabiga&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="yes"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe
+          ><br />
+        </div>
+      </div>
+      <h2 class="map-header">See you there! ❤️</h2>
     </div>
-    <h2 class="map-header">See you there! ❤️</h2>
+    <script>
+      window.onload = function () {
+        var wrapper = document.getElementById("wrapper");
+        var wfInterval = setInterval(flowers, 1300);
+        var counterTwo = 0;
+
+        function flowers() {
+          var posTwo = Math.floor(Math.random() * 100) + 1;
+          var whiteflower = document.createElement("div");
+          whiteflower.setAttribute("class", "flowers");
+          whiteflower.classList.add("whiteflower");
+
+          var wfPetalOne = document.createElement("div");
+          wfPetalOne.setAttribute("class", "wf-petal-one");
+          var wfPetalTwo = document.createElement("div");
+          wfPetalTwo.setAttribute("class", "wf-petal-two");
+          var wfPetalThree = document.createElement("div");
+          wfPetalThree.setAttribute("class", "wf-petal-three");
+
+          whiteflower.appendChild(wfPetalOne);
+          whiteflower.appendChild(wfPetalTwo);
+          whiteflower.appendChild(wfPetalThree);
+
+          whiteflower.style.left = posTwo + "%";
+          wrapper.appendChild(whiteflower);
+
+          counter = counterTwo++;
+
+          setTimeout(function () {
+            var posOne = Math.floor(Math.random() * 100) + 1;
+            var sunflower = document.createElement("div");
+            sunflower.setAttribute("class", "flowers");
+            sunflower.classList.add("sunflower");
+
+            var sfPetalOne = document.createElement("div");
+            sfPetalOne.setAttribute("class", "sf-petal-one");
+            var sfPetalTwo = document.createElement("div");
+            sfPetalTwo.setAttribute("class", "sf-petal-two");
+            var sfPetalThree = document.createElement("div");
+            sfPetalThree.setAttribute("class", "sf-petal-three");
+
+            sunflower.appendChild(sfPetalOne);
+            sunflower.appendChild(sfPetalTwo);
+            sunflower.appendChild(sfPetalThree);
+
+            sunflower.style.left = posOne + "%";
+            wrapper.appendChild(sunflower);
+          }, 1500);
+
+          if (counter == 5) {
+            clearInterval(wfInterval);
+          }
+        }
+      };
+    </script>
   </body>
 </html>
